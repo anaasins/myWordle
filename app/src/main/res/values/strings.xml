@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">my wordle</string>
+    <string name="c_mo_jugar">CÓMO JUGAR</string>
+    <string name="adivina_la_palabra_oculta_en_seis_intentos">Adivina la palabra oculta en seis intentos.</string>
+    <string name="cada_intento_debe_ser_una_palabra_v_lida_de_5_letras">Cada intento debe ser una palabra válida de 5 letras.</string>
+    <string name="despu_s_de_cada_intento_el_color_de_las_letras_cambia_para_mostrar_que_tan_cerca_est_s_de_acertar_la_palabra">Después de cada intento el color de las letras cambia para mostrar que tan cerca estás de acertar la palabra.</string>
+    <string name="opciones">OPCIONES</string>
+    <string name="modo_oscuro">Modo oscuro</string>
+    <string name="empezar_con_la_palabra_de_ayer">Empezar con la palabra de ayer</string>
+    <string name="modo_para_daltonicos">Modo para Daltonicos</string>
+    <string name="ayudas_de_accesibilidad">Ayudas de accesibilidad</string>
+    <string name="publicidad">Publicidad</string>
+    <string name="contacto">Contacto</string>
+    <string name="email_twitter">Email | Twitter</string>
+    <string name="politica_de_privacidad">Politica de privacidad</string>
+    <string name="_34">#34</string>
+    <string name="adaptacion_de_wordle_de_ana_asins">Adaptacion de wordle de Ana Asins</string>
+    <string name="boton_de_cerrar">Boton de cerrar</string>
+    <string name="inicio">Inicio</string>
+    <string name="opciones_2">Opciones</string>
+    <string name="informacion">Informacion</string>
+    <string name="username">Username</string>
+    <string name="jugar">Jugar</string>
+    <string name="palabra">Palabra</string>
+    <string name="comprobar">Comprobar</string>
+    <string name="wordle_es">WORDLE (ES)</string>
+</resources>

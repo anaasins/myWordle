@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OpcionesActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewOpciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="123dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="124dp"
+            android:text="@string/opciones"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="407dp"
+            android:layout_height="646dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Switch
+                android:id="@+id/ayer"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingStart="10dp"
+                android:text="@string/empezar_con_la_palabra_de_ayer"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/oscuro"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingStart="10dp"
+                android:text="@string/modo_oscuro"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/daltonicos"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingStart="10dp"
+                android:text="@string/modo_para_daltonicos"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/ayudas"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingStart="10dp"
+                android:text="@string/ayudas_de_accesibilidad"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/publicidad"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingStart="10dp"
+                android:text="@string/publicidad"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="68dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/username"
+                    android:textColorHint="#0B0A0A" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:text="@string/adaptacion_de_wordle_de_ana_asins" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/cerrarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="9dp"
+            android:contentDescription="@string/boton_de_cerrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="#070606"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="124dp"
+        android:text="@string/opciones"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
