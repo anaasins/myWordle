@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyWordle">
         <activity
+            android:name=".NewWordActivity"
+            android:exported="false" />
+        <activity
             android:name=".OpcionesActivity"
             android:exported="false" />
         <activity

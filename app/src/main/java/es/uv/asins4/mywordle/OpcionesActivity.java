@@ -101,6 +101,10 @@ public class OpcionesActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
+            case R.id.nuevaPalabra:
+                Intent inte = new Intent(getApplicationContext(), NewWordActivity.class);
+                startActivity(inte);
+                return true;
             case R.id.opciones:
                 return true;
             case R.id.informacion:

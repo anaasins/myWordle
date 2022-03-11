@@ -71,10 +71,6 @@ public class MainActivity extends AppCompatActivity {
                     int intento = sharedPref.getInt("try", 0);
                     int hits = 0;
                     //escribo la palabra en los cuadraditos
-                    //TODO --> comprobar que tiene 5 letras y avisar si no
-                    //TODO --> comprobar si coincide o no con mi palabra
-                    //TODO --> pintar las letras de colores
-                    //TODO --> avisar de que ya has hecho los 6 intentos hoy
                     if (intento == 1){
                         TextView t1 = findViewById(R.id.textView11);
                         t1.setText(palabraString.substring(0, 1));
@@ -532,6 +528,7 @@ public class MainActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = sharedPref.edit();
                     editor.putInt("try", intento);
                     editor.apply();
+                    palabra.getEditText().setText("");
 
                     if (intento > 6){
                         jugarButton.setText("Juego finalizado");
@@ -558,6 +555,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
+            case R.id.nuevaPalabra:
+                Intent inte = new Intent(getApplicationContext(), NewWordActivity.class);
+                startActivity(inte);
+                return true;
             case R.id.opciones:
                 Intent in = new Intent(getApplicationContext(), OpcionesActivity.class);
                 startActivity(in);

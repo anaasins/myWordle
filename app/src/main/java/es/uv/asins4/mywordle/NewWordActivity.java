@@ -4,26 +4,36 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
+import android.widget.EditText;
 
-public class InfoActivity extends AppCompatActivity {
-
+public class NewWordActivity extends AppCompatActivity {
+    public static final String EXTRA_REPLY = "es.uv.asins4.mywordle.wordlistsql.REPLY";
+    private EditText editPalabra;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info);
+        setContentView(R.layout.activity_new_word);
 
-        ImageButton imageButton = findViewById(R.id.closeButton);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(in);
+        editPalabra = findViewById(R.id.nuevaPalabra);
+
+        final Button button = findViewById(R.id.buttonGuardar);
+        button.setOnClickListener(view -> {
+            String word = editPalabra.getText().toString();
+            if (word.length()==5){
+                Intent replyIntent = new Intent();
+                if (TextUtils.isEmpty(editPalabra.getText())) {
+                    setResult(RESULT_CANCELED, replyIntent);
+                } else {
+                    replyIntent.putExtra(EXTRA_REPLY, word);
+                    setResult(RESULT_OK, replyIntent);
+                }
             }
+            finish();
         });
     }
 
@@ -39,14 +49,14 @@ public class InfoActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.nuevaPalabra:
-                Intent inte = new Intent(getApplicationContext(), NewWordActivity.class);
-                startActivity(inte);
                 return true;
             case R.id.opciones:
                 Intent in = new Intent(getApplicationContext(), OpcionesActivity.class);
                 startActivity(in);
                 return true;
             case R.id.informacion:
+                Intent in2 = new Intent(getApplicationContext(), InfoActivity.class);
+                startActivity(in2);
                 return true;
             case R.id.inicio:
                 Intent in3 = new Intent(getApplicationContext(), MainActivity.class);

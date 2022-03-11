@@ -10,4 +10,7 @@
     <item
         android:id="@+id/informacion"
         android:title="@string/informacion" />
+    <item
+        android:id="@+id/nuevaPalabra"
+        android:title="Añadir palabra" />
 </menu>
