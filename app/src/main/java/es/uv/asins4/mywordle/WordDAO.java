@@ -21,4 +21,7 @@ public interface WordDAO {
 
     @Query("SELECT * FROM word_table ORDER BY word ASC")
     LiveData<List<Word>> getAlphabetizedWords();
+
+    @Query("SELECT * FROM word_table")
+    List<Word> recogerPalabras();
 }

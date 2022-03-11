@@ -1,6 +1,8 @@
 package es.uv.asins4.mywordle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,14 +22,32 @@ import android.widget.TextView;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.lang.reflect.Array;
+import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+    private WordViewModel mWordViewModel;
+    private List<Word> wordsList;
+    String correcta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final String correcta = "amigo";
+        correcta="amigo";
+
+        //coger la palabra con la que vamos a jugar
+        /*mWordViewModel = new ViewModelProvider(this).get(WordViewModel.class);
+        wordsList= mWordViewModel.recogerPalabras();
+
+        if (!wordsList.isEmpty()){
+            Random random = new Random();
+            int value = random.nextInt(wordsList.size() + 0) + 0;
+            correcta = wordsList.get(value).getWord();
+        }else {
+            correcta="amigo";
+        }*/
+
 
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         int intento = sharedPref.getInt("try", 0);
